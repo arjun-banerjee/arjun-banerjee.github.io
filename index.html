@@ -6,13 +6,11 @@
     font-family: Arial, sans-serif;
   }
 
-  /* Regular bullet lists keep bullets */
   ul:not(.pubs) {
     list-style: disc;
     padding-left: 2em;
   }
 
-  /* Publications list */
   ul.pubs {
     list-style: none;
     padding-left: 0;
@@ -25,13 +23,12 @@
     margin-bottom: 2em;
   }
 
-
   ul.pubs li img {
-    width: 6em;         
-    height: 6em;        
+    width: 6em;
+    height: 6em;
     margin-right: 1.2em;
-    object-fit: cover;  
-    flex-shrink: 0;    
+    object-fit: cover;
+    flex-shrink: 0;
   }
 
   /* Publication text block */
@@ -51,6 +48,25 @@
   h1, h2 {
     margin-top: 1.2em;
   }
+
+  .badge {
+    display: inline-block;
+    color: white;
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 0.2em 0.5em;
+    border-radius: 4px;
+    margin-left: 0.5em;
+    vertical-align: middle;
+  }
+
+  .oral {
+    background-color: #32CD32; /* green */
+  }
+
+  .spotlight {
+    background-color: #007BFF; /* blue */
+  }
 </style>
 </head>
 
@@ -68,7 +84,7 @@
   <li>teaching (either TAing 126/170 or volunteer tutoring for CSM)</li>
   <li>designing clothes and writing about music in GAG's fashion shows or magazines</li>
   <li>taking extremely overexposed film photos with Innod</li>
-  <li>(unsuccessfully) avoiding the 9-5 by making fun things with my friends @ CADE</li>
+  <li>(unsuccessfully) avoiding the 9-5 by making fun things with my friends @ web7 and darwin</li>
 </ul>
 
 <p>i also enjoy <a href="https://www.goodreads.com/">reading</a>, 
@@ -82,11 +98,14 @@
   <li>
     <img src="assets/safegenie.png" alt="SafeGenie Logo">
     <div>
-      <b><a href="https://openreview.net/forum?id=hZ6ra8ApLP" target="_blank">
-      SafeGenie: Erasing Dangerous Concepts from Biological Diffusion Models</a></b><br>
+      <b>
+        <a href="https://openreview.net/forum?id=hZ6ra8ApLP" target="_blank">
+        SafeGenie: Erasing Dangerous Concepts from Biological Diffusion Models</a>
+        <span class="badge oral">Oral</span>
+      </b><br>
       <b>Arjun Banerjee</b>, Ethan Tam, Camille Dang, David Martinez<br>
-      Biosecurity Workshop, NeurIPS 2025 <b>(Oral Presentation)</b><br>
-      [<a href="https://drive.google.com/file/d/13JoK12CUhEYxnxbTXvpavT5yRHNoZOQJ/view?usp=sharing" target="_blank">inital submission (extremely rough draft)</a>]
+      Biosecurity Workshop, NeurIPS 2025<br>
+      [<a href="https://openreview.net/pdf?id=hZ6ra8ApLP" target="_blank">pdf:soon</a>]
       [<a href="https://github.com/arjun-banerjee/safegenie2" target="_blank">code</a>]
     </div>
   </li>
@@ -94,10 +113,13 @@
   <li>
     <img src="assets/plmneuron.png" alt="PLMNeuron Logo">
     <div>
-      <b><a href="https://arxiv.org/abs/2507.06458" target="_blank">
-      Automated Neuron Labelling Enables Generative Steering and Interpretability in Protein Language Models</a></b><br>
+      <b>
+        <a href="https://arxiv.org/abs/2507.06458" target="_blank">
+        Automated Neuron Labelling Enables Generative Steering and Interpretability in Protein Language Models</a>
+        <span class="badge spotlight">Spotlight</span>
+      </b><br>
       <b>Arjun Banerjee</b>, David Martinez, Camille Dang, Ethan Tam<br>
-      Generative AI for Biology Workshop, ICML 2025 <b>(Spotlight)</b><br>
+      Generative AI for Biology Workshop, ICML 2025<br>
       [<a href="https://arxiv.org/pdf/2507.06458" target="_blank">pdf</a>] 
       [<a href="https://github.com/arjun-banerjee/PLMNeuron" target="_blank">code</a>]
     </div>
