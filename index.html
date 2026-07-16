@@ -5,24 +5,20 @@
   body {
     font-family: Arial, sans-serif;
   }
-
   ul:not(.pubs) {
     list-style: disc;
     padding-left: 2em;
   }
-
   ul.pubs {
     list-style: none;
     padding-left: 0;
     margin-top: 1em;
   }
-
   ul.pubs li {
     display: flex;
     align-items: flex-start;
     margin-bottom: 2em;
   }
-
   ul.pubs li img {
     width: 6em;
     height: 6em;
@@ -30,25 +26,20 @@
     object-fit: cover;
     flex-shrink: 0;
   }
-
   /* Publication text block */
   ul.pubs li div {
     line-height: 1.4;
   }
-
   a {
     text-decoration: none;
     color: #0000EE;
   }
-
   a:hover {
     text-decoration: underline;
   }
-
   h1, h2 {
     margin-top: 1.2em;
   }
-
   .badge {
     display: inline-block;
     color: white;
@@ -59,25 +50,20 @@
     margin-left: 0.5em;
     vertical-align: middle;
   }
-
   .oral {
     background-color: #32CD32; /* green */
   }
-
   .spotlight {
     background-color: #007BFF; /* blue */
   }
 </style>
 </head>
-
 <body>
-
 <h1>hi!</h1>
 <p>i'm arjun, a senior @ berkeley majoring in EECS& minoring in Politics, Philosophy and Law</p>
 <p>i try to spend most of my day eating gummy bears and going on walks. in between this, you might find me trying to understand and model biological systems (namely: PLMs/GLM steering, DNA oragimi, DNA kinetics & thermodynamics, and the brain).</p>
 <p>i'm also interested in hardware (mostly optimization algorithms in architecture and analog), probability theory (high-dimensional modelling and bayesian stats), LLMs in education, and spider webs.</p>
 <p>outside of this you might find me:</p>
-
 <ul>
   <li>Cory 521 (99% probability)</li>
   <li>yelling @ 300wpm about geopolitics and losing national finals round(s) with PD@B</li>
@@ -85,91 +71,87 @@
   <li>designing clothes and writing about music in GAG's fashion shows or magazines</li>
   <li>taking extremely overexposed film photos with EthiCAL</li>
 </ul>
-
-<p>i also enjoy <a href="https://www.goodreads.com/">reading</a>, 
-<a href="https://soundcloud.com">making music</a>, 
-<a href="https://soundcloud.com">running</a>,  
-<a href="https://scholar.google.com/">writing papers</a>, and 
+<p>i also enjoy <a href="https://www.goodreads.com/">reading</a>,
+<a href="https://soundcloud.com">making music</a>,
+<a href="https://soundcloud.com">running</a>,
+<a href="https://scholar.google.com/">writing papers</a>, and
 <a href="https://www.linkedin.com">announcing how proud i am for all trivial things in my life.</a> Good luck finding me on any of those platforms!</p>
 
-<h2>Publications</h2>
+<h2>Benchmark Publications</h2>
 <ul class="pubs">
-    <li>
-    <img src="assets/safegenie.png" alt="SafeGenie Logo">
+  <li>
+    <img src="assets/biosecbench-surveillance.png" alt="BioSecBench-Surveillance Logo">
     <div>
-      <b>
-        <a>
-      BioSecBench-Refusal: A paired metric for performance and alignment in agentic biosecurity risk assessment </b><br>
+      <b>BioSecBench-Surveillance: A Verifiable Benchmark for AI Agents in Pathogen Genomic Surveillance</b><br>
+      Harmon Bhasin, Kevin Flyangolts, Dianzhuo Wang, Evan Seeyave, <b>Arjun Banerjee</b>, Amanda Darling, Joshua Stallings, David Stern, Shawn Higdon, Claire Duvallet, Bryan Tegomoh, Kenny Workman<br>
+      Preprint<br>
+      [<a href="https://latch.bio/biosecbench-surveillance" target="_blank">paper</a>]
+      [<a href="https://github.com/latchbio/biosecbench-surveillance" target="_blank">code</a>]
+    </div>
+  </li>
+  <li>
+    <img src="assets/biosecbench-refusal.png" alt="BioSecBench-Refusal Logo">
+    <div>
+      <b>BioSecBench-Refusal: A paired metric for performance and alignment in agentic biosecurity risk assessment</b><br>
       Edwin H. Wintermute, Harmon Bhasin, Christina M. Agapakis, Dianzhuo Wang, Evan Seeyave, <b>Arjun Banerjee</b>, Daniel Fulop, Matthew C. Watson, Adam J. Meyer, Sandrine Boissel, Jens H. Kuhn, Rishi Jain, Noah D. Taylor, Helena Shomar, Patrick M. Boyle, Kenny Workman<br>
       Preprint<br>
-      [<a href="https://arxiv.org/pdf/2607.05462" target="_blank">pdf</a>]
+      [<a href="https://arxiv.org/paper/2607.05462" target="_blank">paper</a>]
       [<a href="https://github.com/latchbio/biosecbench-refusal" target="_blank">code</a>]
     </div>
   </li>
   <li>
-    <li>
-    <img src="assets/safegenie.png" alt="SafeGenie Logo">
+    <img src="assets/scbench-long.png" alt="scBench-Long Logo">
     <div>
-      <b>
-        <a>
-        scBench-Long: Verifiable Benchmarking of Long-Horizon Single-Cell Biology
-      </b><br>
+      <b>scBench-Long: Verifiable Benchmarking of Long-Horizon Single-Cell Biology</b><br>
       Ian Diks, Zhen Yang, <b>Arjun Banerjee</b>, Tim Proctor, Kenny Workman<br>
       Preprint<br>
-      [<a href="https://arxiv.org/pdf/2606.26563" target="_blank">pdf</a>]
+      [<a href="https://arxiv.org/paper/2606.26563" target="_blank">paper</a>]
       [<a href="https://github.com/latchbio/scbench-long" target="_blank">code</a>]
     </div>
   </li>
+</ul>
+
+<h2>Model Publications</h2>
+<ul class="pubs">
   <li>
     <img src="assets/safegenie.png" alt="SafeGenie Logo">
     <div>
-      <b>
-        <a>
-        SafeGenie: Erasing Dangerous Concepts from Biological Diffusion Models</a>
+      <b><a>SafeGenie: Erasing Dangerous Concepts from Biological Diffusion Models</a>
         <span class="badge oral">Oral</span>
       </b><br>
       <b>Arjun Banerjee</b>, Ethan Tam, Camille Dang, David Martinez<br>
       Biosecurity Workshop, NeurIPS 2025<br>
-      [<a href="https://drive.google.com/file/d/1T-GHpOA_tX7gFb30t5eVe-cxX6mIVZmM/view?usp=sharing" target="_blank">pdf</a>]
+      [<a href="https://drive.google.com/file/d/1T-GHpOA_tX7gFb30t5eVe-cxX6mIVZmM/view?usp=sharing" target="_blank">paper</a>]
       [<a href="https://github.com/arjun-banerjee/safegenie2" target="_blank">code</a>]
       [<a href="https://neurips.cc/virtual/2025/loc/san-diego/131323" target="_blank">oral presentation recording, start @ 13:30</a>]
-
     </div>
   </li>
-
   <li>
     <img src="assets/plmneuron.png" alt="PLMNeuron Logo">
     <div>
-      <b>
-        <a href="https://arxiv.org/abs/2507.06458" target="_blank">
-        Automated Neuron Labelling Enables Generative Steering and Interpretability in Protein Language Models</a>
+      <b><a href="https://arxiv.org/abs/2507.06458" target="_blank">Automated Neuron Labelling Enables Generative Steering and Interpretability in Protein Language Models</a>
         <span class="badge spotlight">Spotlight</span>
       </b><br>
       <b>Arjun Banerjee</b>, David Martinez, Camille Dang, Ethan Tam<br>
       Generative AI for Biology Workshop, ICML 2025<br>
-      [<a href="https://arxiv.org/pdf/2507.06458" target="_blank">pdf</a>] 
+      [<a href="https://arxiv.org/paper/2507.06458" target="_blank">paper</a>]
       [<a href="https://github.com/arjun-banerjee/PLMNeuron" target="_blank">code</a>]
     </div>
   </li>
 </ul>
 
-
 <h2>Talks</h2>
 <ul class="pubs">
-    <li>
+  <li>
     <img src="assets/arcadia.jpeg" alt="Arcadia Logo">
     <div>
-      <b>
-        <a href="https://www.arcadiascience.com/" target="_blank">
-        @ Arcadia Science (3/13/26) </a>
-      </b><br>
+      <b><a href="https://www.arcadiascience.com/" target="_blank">@ Arcadia Science (3/13/26)</a></b><br>
       <b>Arjun Banerjee</b>, David Martinez, Camille Dang<br>
       Overview of Automating Neurons and SafeGenie<br>
-      [<a href=https://docs.google.com/presentation/d/1T6djENI8x04rtNzR6X-OwqgSYPEy1fG34sjHHRqFZN4/edit?usp=sharing" target="_blank">slides</a>] 
+      [<a href="https://docs.google.com/presentation/d/1T6djENI8x04rtNzR6X-OwqgSYPEy1fG34sjHHRqFZN4/edit?usp=sharing" target="_blank">slides</a>]
       [<a>recording (soon)!</a>]
     </div>
   </li>
 </ul>
-
 </body>
 </html>
