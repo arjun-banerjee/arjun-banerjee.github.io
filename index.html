@@ -69,6 +69,114 @@
       6px 6px 0 var(--yellow);
     letter-spacing: 0.03em;
   }
+  .hero {
+    display: flex;
+    align-items: center;
+    gap: 0.6em;
+    flex-wrap: wrap;
+  }
+  .hero h1 { margin-bottom: 0.2em; }
+  .scene {
+    height: 132px;
+    width: auto;
+    flex-shrink: 0;
+  }
+  .scene .wing2 {
+    transform-box: fill-box;
+    transform-origin: 72% 100%;
+    animation: flap 0.5s ease-in-out infinite alternate;
+  }
+  .scene .fire {
+    transform-box: fill-box;
+    transform-origin: 100% 50%;
+    animation: flicker 0.28s ease-in-out infinite alternate;
+  }
+  .scene .spark { animation: spark 0.9s linear infinite; }
+  .scene .sword-arm {
+    transform-box: fill-box;
+    transform-origin: 0% 100%;
+    animation: swing 1.1s ease-in-out infinite alternate;
+  }
+  @keyframes flicker {
+    from { transform: scaleX(0.9) scaleY(1.06); opacity: 0.85; }
+    to   { transform: scaleX(1.1) scaleY(0.94); opacity: 1; }
+  }
+  @keyframes spark {
+    0% { opacity: 0; transform: translate(0, 0); }
+    25% { opacity: 1; }
+    100% { opacity: 0; transform: translate(-16px, -12px); }
+  }
+  @keyframes swing {
+    from { transform: rotate(-16deg); }
+    to   { transform: rotate(10deg); }
+  }
+  .h2row {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    flex-wrap: wrap;
+  }
+  .benchpress {
+    height: 60px;
+    width: auto;
+    flex-shrink: 0;
+  }
+  .benchpress .barbell {
+    animation: press 1.1s ease-in-out infinite alternate;
+  }
+  @keyframes press {
+    from { transform: translateY(5px); }
+    to   { transform: translateY(-4px); }
+  }
+  .levscene {
+    height: 60px;
+    width: auto;
+    flex-shrink: 0;
+  }
+  .levscene .levbar,
+  .levscene .wand {
+    animation: levitate 1.2s ease-in-out infinite alternate;
+  }
+  @keyframes levitate {
+    from { transform: translateY(6px); }
+    to   { transform: translateY(-5px); }
+  }
+  .modelscene {
+    height: 66px;
+    width: auto;
+    flex-shrink: 0;
+  }
+  .modelscene .paintarm {
+    transform-box: fill-box;
+    transform-origin: 100% 100%;
+    animation: paint 0.5s ease-in-out infinite alternate;
+  }
+  @keyframes paint {
+    from { transform: rotate(-7deg); }
+    to   { transform: rotate(6deg); }
+  }
+  .talkscene {
+    height: 66px;
+    width: auto;
+    flex-shrink: 0;
+  }
+  .talkscene .tnote {
+    animation: notepop 1.5s ease-out infinite;
+  }
+  .talkscene .flag {
+    transform-box: fill-box;
+    transform-origin: 0% 50%;
+    animation: wave 1s ease-in-out infinite alternate;
+  }
+  @keyframes notepop {
+    0% { opacity: 0; transform: translate(0, 0); }
+    15% { opacity: 1; }
+    100% { opacity: 0; transform: translate(16px, -18px); }
+  }
+  @keyframes wave {
+    from { transform: skewY(-5deg) scaleX(0.94); }
+    to   { transform: skewY(5deg) scaleX(1); }
+  }
   h2 {
     margin-top: 1.2em;
     color: var(--black);
@@ -129,16 +237,128 @@
 </style>
 </head>
 <body>
+<div class="hero">
 <h1>hi!</h1>
+<svg class="scene" viewBox="0 0 310 152" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <g class="wing2">
+    <path d="M244 86 L252 46 L282 72 L264 88 Z" fill="#FF2D95" stroke="#0A0A0A" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M244 86 L264 88 L282 72" fill="none" stroke="#0A0A0A" stroke-width="2"/>
+  </g>
+  <path d="M282 110 Q302 106 298 93 Q308 103 302 119 Q293 119 282 114 Z" fill="#FF2D95" stroke="#0A0A0A" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M212 116 Q204 94 226 84 Q252 76 274 90 Q288 100 282 116 Q248 126 212 116 Z" fill="#FF2D95" stroke="#0A0A0A" stroke-width="3" stroke-linejoin="round"/>
+  <rect x="228" y="116" width="9" height="20" rx="3" fill="#FF2D95" stroke="#0A0A0A" stroke-width="3"/>
+  <rect x="258" y="116" width="9" height="20" rx="3" fill="#FF2D95" stroke="#0A0A0A" stroke-width="3"/>
+  <path d="M232 82 l6 -11 6 11 z" fill="#FFE500" stroke="#0A0A0A" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M246 80 l6 -11 6 11 z" fill="#FFE500" stroke="#0A0A0A" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M204 88 Q226 82 226 104 Q214 114 202 108 Z" fill="#FF2D95" stroke="#0A0A0A" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M216 92 L184 88 L205 100 Z" fill="#FF2D95" stroke="#0A0A0A" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M216 110 L186 115 L205 103 Z" fill="#FF2D95" stroke="#0A0A0A" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M220 86 L231 73 L227 90 Z" fill="#FFE500" stroke="#0A0A0A" stroke-width="2" stroke-linejoin="round"/>
+  <circle cx="214" cy="95" r="4.2" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2"/>
+  <circle cx="213" cy="95" r="2" fill="#0A0A0A"/>
+
+  <g class="fire">
+    <path d="M186 100 Q158 82 140 100 Q158 118 186 100 Z" fill="#FF5A7A"/>
+    <path d="M183 100 Q162 88 150 100 Q162 112 183 100 Z" fill="#FF2D95"/>
+    <path d="M180 100 Q167 93 159 100 Q167 107 180 100 Z" fill="#FF9EC4"/>
+    <path d="M140 100 L152 90 L149 100 L153 110 Z" fill="#FF5A7A"/>
+    <path d="M150 89 l6 6 -8 2 z" fill="#FF2D95"/>
+    <path d="M151 111 l6 -6 2 8 z" fill="#FF2D95"/>
+  </g>
+  <g class="sparks">
+    <circle class="spark" cx="170" cy="94" r="2.2" fill="#FF8FB8" style="animation-delay:0s"/>
+    <circle class="spark" cx="160" cy="104" r="1.8" fill="#FF5A7A" style="animation-delay:0.25s"/>
+    <circle class="spark" cx="176" cy="102" r="2" fill="#FF2D95" style="animation-delay:0.5s"/>
+    <circle class="spark" cx="152" cy="96" r="1.6" fill="#FFB3D9" style="animation-delay:0.7s"/>
+    <circle class="spark" cx="166" cy="98" r="2.4" fill="#FF7A9C" style="animation-delay:0.4s"/>
+  </g>
+
+  <rect x="52" y="112" width="12" height="26" rx="3" fill="#FFE500" stroke="#0A0A0A" stroke-width="3"/>
+  <rect x="70" y="112" width="12" height="26" rx="3" fill="#FFE500" stroke="#0A0A0A" stroke-width="3"/>
+  <rect x="49" y="135" width="17" height="8" rx="2" fill="#0A0A0A"/>
+  <rect x="68" y="135" width="17" height="8" rx="2" fill="#0A0A0A"/>
+  <path d="M46 76 Q67 68 88 76 L84 116 Q67 122 50 116 Z" fill="#FFE500" stroke="#0A0A0A" stroke-width="3" stroke-linejoin="round"/>
+  <rect x="48" y="102" width="38" height="7" fill="#0A0A0A"/>
+  <circle cx="49" cy="80" r="8" fill="#0A0A0A"/>
+  <circle cx="85" cy="80" r="8" fill="#FFE500" stroke="#0A0A0A" stroke-width="3"/>
+  <g class="sword-arm">
+    <path d="M84 86 L106 64" fill="none" stroke="#0A0A0A" stroke-width="11" stroke-linecap="round"/>
+    <path d="M84 86 L106 64" fill="none" stroke="#FFE500" stroke-width="6" stroke-linecap="round"/>
+    <line x1="104" y1="66" x2="138" y2="26" stroke="#0A0A0A" stroke-width="8" stroke-linecap="round"/>
+    <line x1="104" y1="66" x2="136" y2="28" stroke="#FFE500" stroke-width="4" stroke-linecap="round"/>
+    <line x1="95" y1="60" x2="115" y2="72" stroke="#0A0A0A" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="106" cy="64" r="5" fill="#0A0A0A"/>
+  </g>
+  <rect x="53" y="44" width="28" height="32" rx="7" fill="#0A0A0A" stroke="#0A0A0A" stroke-width="3"/>
+  <rect x="55" y="56" width="24" height="4" rx="2" fill="#FFE500"/>
+  <rect x="65" y="46" width="4" height="26" fill="#FFE500"/>
+  <path d="M67 44 Q57 25 76 21 Q65 34 74 42 Z" fill="#FF2D95" stroke="#0A0A0A" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M90 80 L118 80 L118 98 Q118 114 104 120 Q90 114 90 98 Z" fill="#FFE500" stroke="#0A0A0A" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M96 88 L104 100 L112 88" fill="none" stroke="#0A0A0A" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="104" cy="105" r="3" fill="#0A0A0A"/>
+</svg>
+</div>
 <p>I'm Arjun. I work @ latch bio. I once ate 9 pounds of gummy bears in a week (which made me ~7% gummy bear)! You can reach me <a href="mailto:abaner@berkeley.edu">by writing a note on the back of a Haribo Wild Berry bag and putting it at a supermarket in the Mission</a>.</p>
-<p>I enjoy trying to understand and model biological systems (namely: LLM Biological Intellegence, PLMs/GLM steering, DNA oragimi, DNA kinetics & thermodynamics, and the brain).</p>
-<p>I enjoy working on hardware (mostly optimization algorithms in architecture and analog), probability theory (high-dimensional modelling and bayesian stats), and spider webs.</p>
+<p>I enjoy trying to understand and model biological systems (namely: LLM Biological Intellegence, PLMs/GLM steering, DNA origami, DNA kinetics & thermodynamics, and the brain). I also like working on hardware (mostly optimization algorithms in architecture and analog), probability theory (high-dimensional modelling and bayesian stats), and creating spider webs.</p>
 <p>You might also find me
 <a href="https://soundcloud.com/junbuggin">freestyle rapping</a>,
 <a href="https://thelaziestbayesian.substack.com/">waffling</a>,
 <a href="https://www.goodreads.com/">pretending to be an intellectual</a>,
-and running across every street in sf (4% of the way there).</p>
+and running across every street in sf (4% of the way there). I am also a huge Manchester United Fan. Mourianne Fellaini inspired my hair, and Robin Van Persie is the greatest player of all time. </p>
+<div class="h2row">
 <h2>Benchmark Publications</h2>
+<svg class="benchpress" viewBox="0 0 134 92" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <rect x="20" y="58" width="92" height="8" rx="2" fill="#0A0A0A"/>
+  <rect x="27" y="66" width="6" height="18" rx="2" fill="#0A0A0A"/>
+  <rect x="99" y="66" width="6" height="18" rx="2" fill="#0A0A0A"/>
+  <path d="M56 54 L46 43 L42 58" fill="none" stroke="#0A0A0A" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M56 54 L46 43 L42 58" fill="none" stroke="#FF2D95" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M42 59 L31 57 L37 64 Z" fill="#0A0A0A" stroke="#0A0A0A" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M50 45 Q68 42 90 47 L90 57 Q68 60 50 56 Z" fill="#FF2D95" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M95 57 Q92 70 80 68 L84 61 Q93 61 93 55 Z" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2" stroke-linejoin="round"/>
+  <circle cx="100" cy="50" r="8" fill="#FFD6EC" stroke="#0A0A0A" stroke-width="2.5"/>
+  <circle cx="99" cy="47" r="1.5" fill="#0A0A0A"/>
+  <path d="M103 42 L114 47 L111 58 L104 55 Z" fill="#0A0A0A"/>
+  <path d="M104 43 L113 55 L128 26 Z" fill="#FF2D95" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round"/>
+  <circle cx="128" cy="26" r="2.4" fill="#FFE500" stroke="#0A0A0A" stroke-width="1.5"/>
+  <g class="barbell">
+    <line x1="76" y1="50" x2="76" y2="34" stroke="#0A0A0A" stroke-width="6" stroke-linecap="round"/>
+    <line x1="76" y1="50" x2="76" y2="34" stroke="#FF2D95" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="83" y1="50" x2="83" y2="34" stroke="#0A0A0A" stroke-width="6" stroke-linecap="round"/>
+    <line x1="83" y1="50" x2="83" y2="34" stroke="#FF2D95" stroke-width="3.5" stroke-linecap="round"/>
+    <rect x="40" y="31" width="52" height="5" rx="2" fill="#0A0A0A"/>
+    <rect x="39" y="23" width="7" height="21" rx="2" fill="#FF2D95" stroke="#0A0A0A" stroke-width="2"/>
+    <rect x="86" y="23" width="7" height="21" rx="2" fill="#FF2D95" stroke="#0A0A0A" stroke-width="2"/>
+    <rect x="47" y="26" width="5" height="15" rx="1" fill="#FFE500" stroke="#0A0A0A" stroke-width="1.5"/>
+    <rect x="80" y="26" width="5" height="15" rx="1" fill="#FFE500" stroke="#0A0A0A" stroke-width="1.5"/>
+  </g>
+</svg>
+<svg class="levscene" viewBox="0 0 150 96" style="transform: scaleX(-1);" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <rect x="12" y="60" width="76" height="8" rx="2" fill="#0A0A0A"/>
+  <rect x="18" y="68" width="6" height="16" rx="2" fill="#0A0A0A"/>
+  <rect x="76" y="68" width="6" height="16" rx="2" fill="#0A0A0A"/>
+  <g class="levbar">
+    <rect x="18" y="30" width="56" height="5" rx="2" fill="#0A0A0A"/>
+    <rect x="17" y="22" width="7" height="21" rx="2" fill="#FFE500" stroke="#0A0A0A" stroke-width="2"/>
+    <rect x="68" y="22" width="7" height="21" rx="2" fill="#FFE500" stroke="#0A0A0A" stroke-width="2"/>
+    <rect x="25" y="25" width="5" height="15" rx="1" fill="#FF2D95" stroke="#0A0A0A" stroke-width="1.5"/>
+    <rect x="62" y="25" width="5" height="15" rx="1" fill="#FF2D95" stroke="#0A0A0A" stroke-width="1.5"/>
+  </g>
+  <path d="M104 86 L114 50 L128 50 L138 86 Z" fill="#0A0A0A" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M113 46 Q112 64 121 66 Q130 64 129 46 Q121 56 113 46 Z" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2" stroke-linejoin="round"/>
+  <circle cx="121" cy="44" r="8" fill="#FFD6EC" stroke="#0A0A0A" stroke-width="2.5"/>
+  <circle cx="116" cy="43" r="1.5" fill="#0A0A0A"/>
+  <ellipse cx="121" cy="34" rx="13" ry="3.5" fill="#0A0A0A"/>
+  <path d="M110 34 L132 34 L121 8 Z" fill="#0A0A0A" stroke="#0A0A0A" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M121 20 l1.5 3.2 3.5 .4 -2.6 2.4 .7 3.4 -3.1 -1.8 -3.1 1.8 .7 -3.4 -2.6 -2.4 3.5 -.4 z" fill="#FFE500" stroke="#0A0A0A" stroke-width="0.7" stroke-linejoin="round"/>
+  <circle cx="121" cy="9" r="2.4" fill="#FFE500" stroke="#0A0A0A" stroke-width="1.5"/>
+  <g class="wand">
+    <line x1="116" y1="54" x2="100" y2="46" stroke="#0A0A0A" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="100" cy="46" r="3.2" fill="#FFD6EC" stroke="#0A0A0A" stroke-width="1.5"/>
+    <line x1="100" y1="46" x2="80" y2="33" stroke="#0A0A0A" stroke-width="3" stroke-linecap="round"/>
+  </g>
+</svg>
+</div>
 <ul class="pubs">
   <li>
     <img src="assets/variantbench.svg" alt="VariantBench Logo">
@@ -181,7 +401,46 @@ and running across every street in sf (4% of the way there).</p>
     </div>
   </li>
 </ul>
+<div class="h2row">
 <h2>Model Publications</h2>
+<svg class="modelscene" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <rect x="18" y="88" width="44" height="8" rx="2" fill="#0A0A0A"/>
+  <rect x="27" y="72" width="26" height="16" fill="#FFD6EC" stroke="#0A0A0A" stroke-width="2"/>
+  <rect x="22" y="66" width="36" height="7" rx="1" fill="#0A0A0A"/>
+  <path d="M40 40 L30 65 L50 65 Z" fill="#FF2D95" stroke="#0A0A0A" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M37 42 L31 47 L37 50" fill="none" stroke="#0A0A0A" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M37 42 L31 47 L37 50" fill="none" stroke="#FFD6EC" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M43 42 L51 35" fill="none" stroke="#0A0A0A" stroke-width="5" stroke-linecap="round"/>
+  <path d="M43 42 L51 35" fill="none" stroke="#FFD6EC" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="51" cy="35" r="2" fill="#FFD6EC" stroke="#0A0A0A" stroke-width="1.5"/>
+  <circle cx="40" cy="33" r="6" fill="#FFD6EC" stroke="#0A0A0A" stroke-width="2"/>
+  <circle cx="42" cy="33" r="1.3" fill="#0A0A0A"/>
+  <path d="M34 30 L34 24 L37 27 L40 22 L43 27 L46 24 L46 30 Z" fill="#FFE500" stroke="#0A0A0A" stroke-width="1.5" stroke-linejoin="round"/>
+  <line x1="106" y1="50" x2="99" y2="92" stroke="#0A0A0A" stroke-width="3" stroke-linecap="round"/>
+  <line x1="128" y1="50" x2="135" y2="92" stroke="#0A0A0A" stroke-width="3" stroke-linecap="round"/>
+  <line x1="120" y1="56" x2="124" y2="90" stroke="#0A0A0A" stroke-width="3" stroke-linecap="round"/>
+  <rect x="100" y="38" width="34" height="30" rx="1" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="3"/>
+  <path d="M117 50 L111 63 L123 63 Z" fill="#FF2D95"/>
+  <circle cx="117" cy="49" r="3.5" fill="#FFD6EC" stroke="#0A0A0A" stroke-width="1"/>
+  <path d="M113 47 L113 44 L115 46 L117 43 L119 46 L121 44 L121 47 Z" fill="#FFE500" stroke="#0A0A0A" stroke-width="0.8" stroke-linejoin="round"/>
+  <path d="M150 92 Q149 76 161 74 Q173 76 172 92 Z" fill="#FF2D95" stroke="#0A0A0A" stroke-width="2" stroke-linejoin="round"/>
+  <line x1="170" y1="80" x2="178" y2="82" stroke="#0A0A0A" stroke-width="4.5" stroke-linecap="round"/>
+  <line x1="170" y1="80" x2="178" y2="82" stroke="#FFE500" stroke-width="2.5" stroke-linecap="round"/>
+  <ellipse cx="184" cy="84" rx="7" ry="4.5" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1.5"/>
+  <circle cx="182" cy="83" r="1.3" fill="#FF2D95"/>
+  <circle cx="186" cy="84" r="1.3" fill="#FFE500"/>
+  <circle cx="184" cy="86" r="1.2" fill="#0A0A0A"/>
+  <circle cx="163" cy="66" r="8" fill="#FFE500" stroke="#0A0A0A" stroke-width="2"/>
+  <path d="M155 64 L146 60 L156 70 Z" fill="#FFE500" stroke="#0A0A0A" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M171 64 L180 60 L170 70 Z" fill="#FFE500" stroke="#0A0A0A" stroke-width="2" stroke-linejoin="round"/>
+  <g class="paintarm">
+    <line x1="155" y1="77" x2="146" y2="71" stroke="#0A0A0A" stroke-width="5" stroke-linecap="round"/>
+    <line x1="155" y1="77" x2="146" y2="71" stroke="#FFE500" stroke-width="3" stroke-linecap="round"/>
+    <line x1="146" y1="71" x2="133" y2="59" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="132" cy="58" r="2" fill="#FF2D95" stroke="#0A0A0A" stroke-width="1"/>
+  </g>
+</svg>
+</div>
 <ul class="pubs">
   <li>
     <img src="assets/safegenie.svg" alt="SafeGenie Logo">
@@ -207,7 +466,63 @@ and running across every street in sf (4% of the way there).</p>
     </div>
   </li>
 </ul>
+<div class="h2row">
 <h2>Talks</h2>
+<svg class="talkscene" viewBox="0 0 240 104" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <rect x="12" y="92" width="50" height="6" fill="#0A0A0A"/>
+  <rect x="18" y="85" width="38" height="8" rx="1" fill="#FFD6EC" stroke="#0A0A0A" stroke-width="2"/>
+  <path d="M38 52 L30 85 L48 85 Z" fill="#FFE500" stroke="#0A0A0A" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M38 60 l3 4 -3 4 -3 -4 z" fill="#FF2D95" stroke="#0A0A0A" stroke-width="1"/>
+  <line x1="35" y1="55" x2="29" y2="63" stroke="#0A0A0A" stroke-width="5" stroke-linecap="round"/>
+  <line x1="35" y1="55" x2="29" y2="63" stroke="#FFD6EC" stroke-width="3" stroke-linecap="round"/>
+  <rect x="23" y="60" width="13" height="3.5" rx="1.7" fill="#FFD6EC" stroke="#0A0A0A" stroke-width="1"/>
+  <rect x="24" y="62" width="11" height="16" rx="1" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1.5"/>
+  <line x1="26" y1="67" x2="33" y2="67" stroke="#0A0A0A" stroke-width="0.8"/>
+  <line x1="26" y1="70" x2="33" y2="70" stroke="#0A0A0A" stroke-width="0.8"/>
+  <line x1="26" y1="73" x2="31" y2="73" stroke="#0A0A0A" stroke-width="0.8"/>
+  <rect x="23" y="76" width="13" height="3.5" rx="1.7" fill="#FFD6EC" stroke="#0A0A0A" stroke-width="1"/>
+  <circle cx="38" cy="46" r="6" fill="#FFD6EC" stroke="#0A0A0A" stroke-width="2"/>
+  <path d="M32 45 Q38 37 45 44 Q39 43 32 45 Z" fill="#FF2D95" stroke="#0A0A0A" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M44 43 Q49 36 47 45" fill="none" stroke="#FFE500" stroke-width="2" stroke-linecap="round"/>
+  <line x1="41" y1="54" x2="47" y2="47" stroke="#0A0A0A" stroke-width="5" stroke-linecap="round"/>
+  <line x1="41" y1="54" x2="47" y2="47" stroke="#FFD6EC" stroke-width="3" stroke-linecap="round"/>
+  <path d="M45 44 Q60 42 68 40 L78 34 L80 46 L70 48 Q60 48 45 49 Z" fill="#FFE500" stroke="#0A0A0A" stroke-width="2" stroke-linejoin="round"/>
+  <circle cx="45" cy="46" r="2" fill="#FFE500" stroke="#0A0A0A" stroke-width="1.5"/>
+  <path d="M58 47 L58 59 L67 53 Z" fill="#FF2D95" stroke="#0A0A0A" stroke-width="1.5" stroke-linejoin="round"/>
+  <circle cx="60" cy="52" r="1.2" fill="#FFE500"/>
+  <g class="tnote" style="animation-delay:0s">
+    <circle cx="84" cy="40" r="2.2" fill="#FF2D95"/>
+    <rect x="85.6" y="32" width="1.3" height="8" fill="#FF2D95"/>
+  </g>
+  <g class="tnote" style="animation-delay:0.5s">
+    <circle cx="90" cy="44" r="2" fill="#0A0A0A"/>
+    <rect x="91.4" y="37" width="1.2" height="7" fill="#0A0A0A"/>
+  </g>
+  <g class="tnote" style="animation-delay:1s">
+    <circle cx="88" cy="34" r="1.8" fill="#FFE500" stroke="#0A0A0A" stroke-width="0.6"/>
+    <rect x="89.3" y="28" width="1.1" height="6" fill="#FFE500" stroke="#0A0A0A" stroke-width="0.4"/>
+  </g>
+  <path d="M96 94 Q97 76 104 74 Q111 76 112 94 Z" fill="#FF2D95" stroke="#0A0A0A" stroke-width="1.5" stroke-linejoin="round"/>
+  <circle cx="104" cy="70" r="4.5" fill="#FFD6EC" stroke="#0A0A0A" stroke-width="1.5"/>
+  <path d="M100 67 L108 67 L104 59 Z" fill="#0A0A0A" stroke="#0A0A0A" stroke-width="1"/>
+  <path d="M118 94 Q119 78 125 76 Q131 78 132 94 Z" fill="#FFE500" stroke="#0A0A0A" stroke-width="1.5" stroke-linejoin="round"/>
+  <circle cx="125" cy="72" r="4.3" fill="#FFD6EC" stroke="#0A0A0A" stroke-width="1.5"/>
+  <line x1="133" y1="94" x2="133" y2="54" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round"/>
+  <path class="flag" d="M133 55 L147 58 L133 64 Z" fill="#FF2D95" stroke="#0A0A0A" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M142 94 Q143 76 150 74 Q157 76 158 94 Z" fill="#FFD6EC" stroke="#0A0A0A" stroke-width="1.5" stroke-linejoin="round"/>
+  <circle cx="150" cy="70" r="4.5" fill="#FFD6EC" stroke="#0A0A0A" stroke-width="1.5"/>
+  <path d="M146 67 L154 67 L150 59 Z" fill="#FFE500" stroke="#0A0A0A" stroke-width="1"/>
+  <path d="M164 94 Q165 78 171 76 Q177 78 178 94 Z" fill="#0A0A0A" stroke="#0A0A0A" stroke-width="1.5" stroke-linejoin="round"/>
+  <circle cx="171" cy="72" r="4.3" fill="#FFD6EC" stroke="#0A0A0A" stroke-width="1.5"/>
+  <path d="M184 94 Q185 76 192 74 Q199 76 200 94 Z" fill="#FF2D95" stroke="#0A0A0A" stroke-width="1.5" stroke-linejoin="round"/>
+  <circle cx="192" cy="70" r="4.5" fill="#FFD6EC" stroke="#0A0A0A" stroke-width="1.5"/>
+  <line x1="200" y1="94" x2="200" y2="56" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round"/>
+  <path class="flag" d="M200 57 L214 60 L200 66 Z" fill="#FFE500" stroke="#0A0A0A" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M208 94 Q209 78 215 76 Q221 78 222 94 Z" fill="#FFE500" stroke="#0A0A0A" stroke-width="1.5" stroke-linejoin="round"/>
+  <circle cx="215" cy="72" r="4.3" fill="#FFD6EC" stroke="#0A0A0A" stroke-width="1.5"/>
+  <path d="M211 69 L219 69 L215 61 Z" fill="#0A0A0A" stroke="#0A0A0A" stroke-width="1"/>
+</svg>
+</div>
 <ul class="pubs">
   <li>
     <img src="assets/arcadia.svg" alt="Arcadia Logo">
