@@ -178,6 +178,14 @@
     from { transform: skewY(-5deg) scaleX(0.94); }
     to   { transform: skewY(5deg) scaleX(1); }
   }
+  @media (max-width: 640px) {
+    h1 { font-size: 3.2em; }
+    .scene { height: 88px; }
+    .benchpress,
+    .levscene,
+    .modelscene,
+    .talkscene { height: 44px; }
+  }
   h2 {
     margin-top: 1.2em;
     color: var(--black);
